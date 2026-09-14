@@ -8,7 +8,7 @@ import Parent from "./Parent.jsx";
 createRoot(document.getElementById("root")).render(
   // <StrictMode>
   <div>
-    <Parent />
+    <App />
   </div>,
-  // </StrictMode>,
+  // </StrictMode>
 );
