@@ -22,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+*.jpg
+*.png
+*.svg
+
+Child.jsx
+Parent.jsx
+Test.jsx
