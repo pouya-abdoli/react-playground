@@ -1,33 +1,59 @@
-import React from "react";
+import React, { useState } from "react";
 import EditTodo from "./EditTodo";
 import DeleteTodo from "./DeleteTodo";
 
-const TodoItem = ({ todo, statusHandler, todoRemoveHandler }) => {
+const TodoItem = ({
+  todo,
+  statusHandler,
+  todoRemoveHandler,
+  changeHandler,
+}) => {
+  const [editMode, setEditMode] = useState(false);
+
+  const closeInput = (event) => {
+    if (event.key === "Enter") {
+      changeHandler(todo.id, event.target.value);
+      setEditMode(false);
+    }
+  };
+
   return (
-    <div>
-      <li className="relative flex items-center justify-between px-2 py-6 border-b">
-        <div>
-          <input
-            type="checkbox"
-            className=""
-            checked={todo.status}
-            onChange={() => statusHandler(todo.id)}
-          />
-          <p
-            className={`inline-block mt-1 ml-2 text-gray-600 ${todo.status ? "line-through" : ""}`}
+    <>
+      {editMode ? (
+        <input
+          onKeyDown={closeInput}
+          defaultValue={todo.name}
+          className="w-full px-2 py-3 border rounded outline-none border-gray-600"
+          type="text"
+        />
+      ) : (
+        <li className="relative flex items-center justify-between px-2 py-6 border-b">
+          <div>
+            <input
+              type="checkbox"
+              checked={todo.status}
+              onChange={() => statusHandler(todo.id)}
+            />
+            <p
+              className={`inline-block mt-1 ml-2 text-gray-600 ${todo.status ? "line-through" : ""}`}
+            >
+              {todo.name}
+            </p>
+          </div>
+          <button
+            type="button"
+            className="absolute right-0 flex items-center space-x-1"
           >
-            {todo.name}
-          </p>
-        </div>
-        <button
-          type="button"
-          className="absolute right-0 flex items-center space-x-1"
-        >
-          <EditTodo />
-          <DeleteTodo todo={todo} todoRemoveHandler={todoRemoveHandler} />
-        </button>
-      </li>
-    </div>
+            <EditTodo setEditMode={setEditMode} />
+            <DeleteTodo
+              todo={todo}
+              todoRemoveHandler={todoRemoveHandler}
+              changeHandler={changeHandler}
+            />
+          </button>
+        </li>
+      )}
+    </>
   );
 };
 

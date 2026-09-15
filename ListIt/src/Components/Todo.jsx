@@ -43,6 +43,13 @@ const Todo = () => {
     setTodos(updateTodos2);
   };
 
+  const changeHandler = (todoId, newName) => {
+    const Updatedtodos3 = todos.map((item) =>
+      item.id === todoId ? { ...item, name: newName } : item,
+    );
+    setTodos(Updatedtodos3);
+  };
+
   return (
     <div>
       <div className="bg-gray-100">
@@ -67,6 +74,7 @@ const Todo = () => {
               todos={todos}
               statusHandler={statusHandler}
               todoRemoveHandler={todoRemoveHandler}
+              changeHandler={changeHandler}
             />
           </div>
         </div>
