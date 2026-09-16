@@ -4,13 +4,13 @@ import DeleteTodo from "./DeleteTodo";
 import { newContext } from "./newContext";
 
 const TodoItem = ({ todo }) => {
-  const { changeHandler, statusHandler } = useContext(newContext);
+  const { renameTodo, setTodoStatus } = useContext(newContext);
 
   const [editMode, setEditMode] = useState(false);
 
   const closeInput = (event) => {
     if (event.key === "Enter") {
-      changeHandler(todo.id, event.target.value);
+      renameTodo(todo.id, event.target.value);
       setEditMode(false);
     }
   };
@@ -30,7 +30,7 @@ const TodoItem = ({ todo }) => {
             <input
               type="checkbox"
               checked={todo.status}
-              onChange={() => statusHandler(todo.id)}
+              onChange={() => setTodoStatus(todo.id)}
             />
             <p
               className={`inline-block mt-1 ml-2 text-gray-600 ${todo.status ? "line-through" : ""}`}

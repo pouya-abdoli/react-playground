@@ -30,31 +30,27 @@ const AppDataProvider = ({ children }) => {
     setInput("");
   };
 
-  const statusHandler = (todoId) => {
-    // console.log("status was changed")
-    // console.log(todoId)
-    const updateTodos = todos.map((item) =>
+  const toggleTodo = (todoId) => {
+    const updated = todos.map((item) =>
       item.id === todoId ? { ...item, status: !item.status } : item,
     );
-    setTodos(updateTodos);
+    setTodos(updated);
   };
 
-  const todoRemoveHandler = (todoId) => {
-    // console.log("Todo was removed")
-    // console.log(todoId)
-    const updateTodos2 = todos.filter((item) => item.id !== todoId);
-    setTodos(updateTodos2);
+  const deleteTodo = (todoId) => {
+    const remained = todos.filter((item) => item.id !== todoId);
+    setTodos(remained);
   };
 
-  const changeHandler = (todoId, newName) => {
-    const Updatedtodos3 = todos.map((item) =>
+  const renameTodo = (todoId, newName) => {
+    const updated = todos.map((item) =>
       item.id === todoId ? { ...item, name: newName } : item,
     );
-    setTodos(Updatedtodos3);
+    setTodos(updated);
   };
   return (
     // prettier-ignore
-    <newContext.Provider value={{ todos, input, setInput, addTodo, statusHandler, todoRemoveHandler, changeHandler }}>
+    <newContext.Provider value={{ todos, input, setInput, addTodo, toggleTodo, deleteTodo, renameTodo }}>
         {children}
     </newContext.Provider>
   );
