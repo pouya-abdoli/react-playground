@@ -1,5 +1,3 @@
-import React from "react";
-
 const EditTodo = ({ setEditMode }) => {
   return (
     <div>

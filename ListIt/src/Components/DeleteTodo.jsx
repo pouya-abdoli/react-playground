@@ -1,6 +1,9 @@
-import React from "react";
+import { useContext } from "react";
+import { newContext } from "./newContext";
 
-const DeleteTodo = ({ todoRemoveHandler, todo }) => {
+const DeleteTodo = ({ todo }) => {
+  const { todoRemoveHandler } = useContext(newContext);
+
   return (
     <div>
       <svg

@@ -1,13 +1,11 @@
-import React, { useState } from "react";
+import { useContext, useState } from "react";
 import EditTodo from "./EditTodo";
 import DeleteTodo from "./DeleteTodo";
+import { newContext } from "./newContext";
 
-const TodoItem = ({
-  todo,
-  statusHandler,
-  todoRemoveHandler,
-  changeHandler,
-}) => {
+const TodoItem = ({ todo }) => {
+  const { changeHandler, statusHandler } = useContext(newContext);
+
   const [editMode, setEditMode] = useState(false);
 
   const closeInput = (event) => {
@@ -45,11 +43,7 @@ const TodoItem = ({
             className="absolute right-0 flex items-center space-x-1"
           >
             <EditTodo setEditMode={setEditMode} />
-            <DeleteTodo
-              todo={todo}
-              todoRemoveHandler={todoRemoveHandler}
-              changeHandler={changeHandler}
-            />
+            <DeleteTodo todo={todo} />
           </button>
         </li>
       )}
