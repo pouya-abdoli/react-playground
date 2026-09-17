@@ -1,9 +1,8 @@
-import { useContext } from "react";
 import TodoItem from "./TodoItem";
-import { newContext } from "./newContext";
+import { useAppData } from "./newContext";
 
 const TodoList = ({}) => {
-  const { todos } = useContext(newContext);
+  const { todos } = useAppData();
 
   return (
     <div>

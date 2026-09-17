@@ -1,10 +1,10 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import EditTodo from "./EditTodo";
 import DeleteTodo from "./DeleteTodo";
-import { newContext } from "./newContext";
+import { useAppData } from "./newContext";
 
 const TodoItem = ({ todo }) => {
-  const { renameTodo, setTodoStatus } = useContext(newContext);
+  const { renameTodo, toggleTodo } = useAppData();
 
   const [editMode, setEditMode] = useState(false);
 
@@ -30,7 +30,7 @@ const TodoItem = ({ todo }) => {
             <input
               type="checkbox"
               checked={todo.status}
-              onChange={() => setTodoStatus(todo.id)}
+              onChange={() => toggleTodo(todo.id)}
             />
             <p
               className={`inline-block mt-1 ml-2 text-gray-600 ${todo.status ? "line-through" : ""}`}

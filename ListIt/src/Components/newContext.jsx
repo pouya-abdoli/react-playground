@@ -1,9 +1,9 @@
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 export const newContext = createContext();
 
-import React from "react";
+export const useAppData = () => useContext(newContext)
 
 const AppDataProvider = ({ children }) => {
   const [todos, setTodos] = useState([

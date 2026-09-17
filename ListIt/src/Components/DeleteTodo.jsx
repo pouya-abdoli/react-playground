@@ -1,8 +1,7 @@
-import { useContext } from "react";
-import { newContext } from "./newContext";
+import { useAppData } from "./newContext";
 
 const DeleteTodo = ({ todo }) => {
-  const { deleteTodo } = useContext(newContext);
+  const { deleteTodo } = useAppData();
 
   return (
     <div>
