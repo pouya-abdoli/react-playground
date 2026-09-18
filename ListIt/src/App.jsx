@@ -1,4 +1,4 @@
-import AppDataProvider from "./Components/newContext";
+import AppDataProvider from "./Components/AppDataProvider";
 import Todo from "./Components/Todo";
 
 function App() {
