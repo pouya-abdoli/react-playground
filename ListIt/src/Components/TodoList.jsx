@@ -1,14 +1,14 @@
 import TodoItem from "./TodoItem";
 import { useAppData } from "./newContext";
 
-const TodoList = ({}) => {
+const TodoList = () => {
   const { todos } = useAppData();
 
   return (
     <div>
       <ul className="list-reset">
-        {todos.map((todo, index) => (
-          <TodoItem key={index} todo={todo} />
+        {todos.map((todo) => (
+          <TodoItem key={todo.id} todo={todo} />
         ))}
       </ul>
     </div>
