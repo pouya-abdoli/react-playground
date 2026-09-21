@@ -35,9 +35,9 @@ const Product = () => {
             </div>
           </div>
 
-          <div className=" col-span-2 bg-sky-200">
-            <img className="w-full p-4 rounded" src={toyImg} alt="" />
-            <Button variant="warning" className="mt-15 text-red-500" onClick={handleTest}>
+          <div className=" col-span-2 bg-sky-200 p-4">
+            <img className="w-full rounded" src={toyImg} alt="" />
+            <Button variant="primary" className=" py-1 w-full mt-2" onClick={handleTest}>
               Add to card
             </Button>
           </div>
