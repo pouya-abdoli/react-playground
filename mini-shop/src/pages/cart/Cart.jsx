@@ -17,7 +17,7 @@ const Cart = () => {
           <p>تخفیف شما: 2000</p>
           <p> قیمت نهایی: 2000</p>
         </div>
-        <Button className="mt-2" variant="success">تبت سفارش</Button>
+        <Button className="mt-2" variant="success">ثبت سفارش</Button>
       </Container>
     </div>
   );
