@@ -9,3 +9,10 @@ export async function getProducts() {
   console.log(data);
   return data;
 }
+
+export async function getProduct(id) {
+  const {data} = await client(`/products/${id}`)
+
+  return data
+  
+}

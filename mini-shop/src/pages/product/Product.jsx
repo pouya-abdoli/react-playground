@@ -1,10 +1,19 @@
 import { useParams } from "react-router";
 import Container from "../../components/container/Container";
-import toyImg from "../../assets/pic2.jpg";
 import Button from "../../components/buttons/Button";
+import { getProduct } from "../../services/api";
+import { useEffect, useState } from "react";
 
 const Product = () => {
   const params = useParams();
+
+  const [product, setProduct] = useState();
+
+  useEffect(() => {
+    getProduct(params.id).then((result) => {
+      setProduct(result);
+    });
+  }, []);
 
   const handleTest = () => {
     alert("clicked!!");
@@ -15,28 +24,15 @@ const Product = () => {
       <Container>
         <div className=" h-96 mt-4 shadow grid grid-cols-12">
           <div className=" col-span-10 p-4">
-            <h1 className="text-right">عنوان محصول</h1>
+            <h1 className="font-bold text-xl">{product?.title}</h1>
             <div>
-              <p className="text-right">قیمت: 25$</p>
-              <p className="text-right">
-                اتنیباتمسیاتبتسیبتنسیتنبتشسیبهسشیهعبتنشسیبتنسیهعبتنمشسبدنمیستنکب
-                تسیبتتیسبنم تسیبتتیسبنم
-                اتنیباتمسیاتبتسیبتنسیتنبتشسیبهسشیهعبتنشسیبتنسیهعبتنمشسبدنمیستنکب
-                تسیبتتیسبنم تسیبتتیسبنم
-                اتنیباتمسیاتبتسیبتنسیتنبتشسیبهسشیهعبتنشسیبتنسیهعبتنمشسبدنمیستنکب
-                تسیبتتیسبنم تسیبتتیسبنم
-                اتنیباتمسیاتبتسیبتنسیتنبتشسیبهسشیهعبتنشسیبتنسیهعبتنمشسبدنمیستنکب
-                تسیبتتیسبنم تسیبتتیسبنم
-                سبیییییییییییییییییییییییییییییییییاتنیباتمسیاتبتسیبتنسیتنبتشسیبهسشیهعبتنشسیبتنسیهعبتنمشسبدنمیستنکب
-                تسیبتتیسبنم تسیبتتیسبنم
-                اتنیباتمسیاتبتسیبتنسیتنبتشسیبهسشیهعبتنشسیبتنسیهعبتنمشسبدنمیستنکب
-                تسیبتتیسبنم تسیبتتیسبنم
-              </p>
+              <p className="text-right">{product?.price}$</p>
+              <p className="text-gray-500">{product?.description}</p>
             </div>
           </div>
 
           <div className=" col-span-2 bg-sky-200 p-4">
-            <img className="w-full rounded" src={toyImg} alt="" />
+            <img className="w-full rounded" src={product?.image} alt={product?.title} />
             <Button variant="primary" className=" py-1 w-full mt-2" onClick={handleTest}>
               Add to card
             </Button>
