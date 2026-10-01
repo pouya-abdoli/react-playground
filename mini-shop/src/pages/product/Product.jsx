@@ -3,21 +3,22 @@ import Container from "../../components/container/Container";
 import Button from "../../components/buttons/Button";
 import { getProduct } from "../../services/api";
 import { useEffect, useState } from "react";
+import { useShoppingCartContext } from "../../context/ShoppingCartContext";
 
 const Product = () => {
   const params = useParams();
 
   const [product, setProduct] = useState();
 
+  const {handleIncreaseProductQty, cartItem} = useShoppingCartContext()
+
   useEffect(() => {
     getProduct(params.id).then((result) => {
       setProduct(result);
     });
   }, []);
-
-  const handleTest = () => {
-    alert("clicked!!");
-  };
+  
+  console.log(cartItem);
 
   return (
     <div>
@@ -33,7 +34,7 @@ const Product = () => {
 
           <div className=" col-span-2 bg-sky-200 p-4">
             <img className="w-full rounded" src={product?.image} alt={product?.title} />
-            <Button variant="primary" className=" py-1 w-full mt-2" onClick={handleTest}>
+            <Button onClick={() => handleIncreaseProductQty(product)} variant="primary" className=" py-1 w-full mt-2">
               Add to card
             </Button>
           </div>
