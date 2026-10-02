@@ -24,8 +24,6 @@ const Product = () => {
     });
   }, []);
 
-  console.log(cartItems);
-
   return (
     <div>
       <Container>
