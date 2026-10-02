@@ -1,5 +1,5 @@
+import { Link } from "react-router";
 import { useShoppingCartContext } from "../../context/ShoppingCartContext";
-import Product from "../../pages/product/Product";
 import Button from "../buttons/Button";
 
 const CartItem = ({ id, qty, title, price, image }) => {
@@ -14,7 +14,9 @@ const CartItem = ({ id, qty, title, price, image }) => {
 
   return (
     <div className="flex flex-row-reverse items-center gap-4 mt-5 border-b pb-2">
-      <img className="w-28 rounded" src={image} alt={title} />
+      <Link to={`/product/${id}`}>
+        <img className="w-28 rounded" src={image} alt={title} />
+      </Link>
 
       <div className="mr-4">
         <h3 className="text-right">{title}</h3>
