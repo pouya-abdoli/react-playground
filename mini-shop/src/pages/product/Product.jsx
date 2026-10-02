@@ -10,7 +10,7 @@ const Product = () => {
 
   const [product, setProduct] = useState();
 
-  const { handleIncreaseProductQty, handleDecreaseProductQty, cartItem } = useShoppingCartContext();
+  const { handleIncreaseProductQty, handleDecreaseProductQty, cartItems } = useShoppingCartContext();
 
   useEffect(() => {
     getProduct(params.id).then((result) => {
@@ -18,7 +18,7 @@ const Product = () => {
     });
   }, []);
 
-  console.log(cartItem);
+  console.log(cartItems);
 
   // prettier-ignore
   return (

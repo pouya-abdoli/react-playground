@@ -7,10 +7,10 @@ const useShoppingCartContext = () => {
 };
 
 const ShoppingCartProvider = ({ children }) => {
-  const [cartItem, setCartItem] = useState([]);
+  const [cartItems, setCartItems] = useState([]);
 
   const handleIncreaseProductQty = (product) => {
-    setCartItem((currentItems) => {
+    setCartItems((currentItems) => {
       const exists = currentItems.find((item) => item.id === product.id);
 
       if (exists) {
@@ -24,7 +24,7 @@ const ShoppingCartProvider = ({ children }) => {
   };
 
   const handleDecreaseProductQty = (product) => {
-    setCartItem((currentItems) => {
+    setCartItems((currentItems) => {
       const exists = currentItems.find((item) => item.id === product.id);
 
       if (!exists) return currentItems;
@@ -39,7 +39,7 @@ const ShoppingCartProvider = ({ children }) => {
   };
 
   return (
-    <ShoppingCartContext.Provider value={{ cartItem, handleIncreaseProductQty, handleDecreaseProductQty }}>
+    <ShoppingCartContext.Provider value={{ cartItems, handleIncreaseProductQty, handleDecreaseProductQty }}>
       {children}
     </ShoppingCartContext.Provider>
   );
