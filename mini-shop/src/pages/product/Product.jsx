@@ -15,6 +15,7 @@ const Product = () => {
     handleDecreaseProductQty,
     cartItems,
     getProductQty,
+    handleRemoveProduct,
   } = useShoppingCartContext();
 
   useEffect(() => {
@@ -53,26 +54,34 @@ const Product = () => {
                 Add to cart
               </Button>
             ) : (
-              <div className="grid grid-cols-3">
+              <>
+                <div className="grid grid-cols-3">
+                  <Button
+                    onClick={() => handleDecreaseProductQty(product)}
+                    variant="primary"
+                    className=" py-1 w-full mt-2"
+                  >
+                    -
+                  </Button>
+                  <span className="font-bold flex justify-center items-center">
+                    {getProductQty(product)}
+                  </span>
+                  <Button
+                    onClick={() => handleIncreaseProductQty(product)}
+                    variant="primary"
+                    className=" py-1 w-full mt-2"
+                  >
+                    +
+                  </Button>
+                </div>
                 <Button
-                  onClick={() => handleIncreaseProductQty(product)}
-                  variant="primary"
+                  onClick={() => handleRemoveProduct(product)}
+                  variant="danger"
                   className=" py-1 w-full mt-2"
                 >
-                  +
+                  Remove
                 </Button>
-                <span className="font-bold flex justify-center items-center">
-                  {getProductQty(product)}
-                </span>
-                <Button
-                  onClick={() => handleDecreaseProductQty(product)}
-                  variant="primary"
-                  className=" py-1 w-full mt-2"
-                >
-                  -
-                </Button>
-                
-              </div>
+              </>
             )}
           </div>
         </div>

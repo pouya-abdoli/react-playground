@@ -44,6 +44,12 @@ const ShoppingCartProvider = ({ children }) => {
     return cartItems.find((item) => item.id === product.id)?.qty || 0;
   };
 
+  const handleRemoveProduct = (product) => {
+    setCartItems((currentItems) =>
+      currentItems.filter((item) => item.id !== product.id),
+    );
+  };
+
   return (
     <ShoppingCartContext.Provider
       value={{
@@ -51,6 +57,7 @@ const ShoppingCartProvider = ({ children }) => {
         handleIncreaseProductQty,
         handleDecreaseProductQty,
         getProductQty,
+        handleRemoveProduct,
       }}
     >
       {children}
