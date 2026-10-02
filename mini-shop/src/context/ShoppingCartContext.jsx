@@ -22,8 +22,24 @@ const ShoppingCartProvider = ({ children }) => {
       return [...currentItems, { ...product, qty: 1 }];
     });
   };
+
+  const handleDecreaseProductQty = (product) => {
+    setCartItem((currentItems) => {
+      const exists = currentItems.find((item) => item.id === product.id);
+
+      if (!exists) return currentItems;
+
+      if (exists.qty === 1) {
+        return currentItems.filter((item) => item.id !== product.id);
+      }
+      return currentItems.map((item) =>
+        item.id === product.id ? { ...item, qty: item.qty - 1 } : item,
+      );
+    });
+  };
+
   return (
-    <ShoppingCartContext.Provider value={{ cartItem, handleIncreaseProductQty }}>
+    <ShoppingCartContext.Provider value={{ cartItem, handleIncreaseProductQty, handleDecreaseProductQty }}>
       {children}
     </ShoppingCartContext.Provider>
   );

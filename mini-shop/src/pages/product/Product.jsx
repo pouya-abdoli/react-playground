@@ -10,16 +10,17 @@ const Product = () => {
 
   const [product, setProduct] = useState();
 
-  const {handleIncreaseProductQty, cartItem} = useShoppingCartContext()
+  const { handleIncreaseProductQty, handleDecreaseProductQty, cartItem } = useShoppingCartContext();
 
   useEffect(() => {
     getProduct(params.id).then((result) => {
       setProduct(result);
     });
   }, []);
-  
+
   console.log(cartItem);
 
+  // prettier-ignore
   return (
     <div>
       <Container>
@@ -36,6 +37,9 @@ const Product = () => {
             <img className="w-full rounded" src={product?.image} alt={product?.title} />
             <Button onClick={() => handleIncreaseProductQty(product)} variant="primary" className=" py-1 w-full mt-2">
               Add to card
+            </Button>
+            <Button onClick={() => handleDecreaseProductQty(product)} variant="primary" className=" py-1 w-full mt-2">
+              -
             </Button>
           </div>
         </div>
