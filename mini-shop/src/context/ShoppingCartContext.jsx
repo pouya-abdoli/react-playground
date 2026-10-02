@@ -50,6 +50,8 @@ const ShoppingCartProvider = ({ children }) => {
     );
   };
 
+  const cartQty = cartItems.reduce((totalQty, item) => totalQty + item.qty, 0);
+
   return (
     <ShoppingCartContext.Provider
       value={{
@@ -58,6 +60,7 @@ const ShoppingCartProvider = ({ children }) => {
         handleDecreaseProductQty,
         getProductQty,
         handleRemoveProduct,
+        cartQty,
       }}
     >
       {children}
