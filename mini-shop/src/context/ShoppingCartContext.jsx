@@ -38,8 +38,21 @@ const ShoppingCartProvider = ({ children }) => {
     });
   };
 
+  const getProductQty = (product) => {
+    // Guard: product may by undefined on first render (before API fetch completes)
+    if (!product) return 0;
+    return cartItems.find((item) => item.id === product.id)?.qty || 0;
+  };
+
   return (
-    <ShoppingCartContext.Provider value={{ cartItems, handleIncreaseProductQty, handleDecreaseProductQty }}>
+    <ShoppingCartContext.Provider
+      value={{
+        cartItems,
+        handleIncreaseProductQty,
+        handleDecreaseProductQty,
+        getProductQty,
+      }}
+    >
       {children}
     </ShoppingCartContext.Provider>
   );

@@ -10,7 +10,12 @@ const Product = () => {
 
   const [product, setProduct] = useState();
 
-  const { handleIncreaseProductQty, handleDecreaseProductQty, cartItems } = useShoppingCartContext();
+  const {
+    handleIncreaseProductQty,
+    handleDecreaseProductQty,
+    cartItems,
+    getProductQty,
+  } = useShoppingCartContext();
 
   useEffect(() => {
     getProduct(params.id).then((result) => {
@@ -20,7 +25,6 @@ const Product = () => {
 
   console.log(cartItems);
 
-  // prettier-ignore
   return (
     <div>
       <Container>
@@ -34,13 +38,42 @@ const Product = () => {
           </div>
 
           <div className=" col-span-2 bg-sky-200 p-4">
-            <img className="w-full rounded" src={product?.image} alt={product?.title} />
-            <Button onClick={() => handleIncreaseProductQty(product)} variant="primary" className=" py-1 w-full mt-2">
-              Add to card
-            </Button>
-            <Button onClick={() => handleDecreaseProductQty(product)} variant="primary" className=" py-1 w-full mt-2">
-              -
-            </Button>
+            <img
+              className="w-full rounded"
+              src={product?.image}
+              alt={product?.title}
+            />
+
+            {getProductQty(product) === 0 ? (
+              <Button
+                onClick={() => handleIncreaseProductQty(product)}
+                variant="primary"
+                className=" py-1 w-full mt-2"
+              >
+                Add to cart
+              </Button>
+            ) : (
+              <div className="grid grid-cols-3">
+                <Button
+                  onClick={() => handleIncreaseProductQty(product)}
+                  variant="primary"
+                  className=" py-1 w-full mt-2"
+                >
+                  +
+                </Button>
+                <span className="font-bold flex justify-center items-center">
+                  {getProductQty(product)}
+                </span>
+                <Button
+                  onClick={() => handleDecreaseProductQty(product)}
+                  variant="primary"
+                  className=" py-1 w-full mt-2"
+                >
+                  -
+                </Button>
+                
+              </div>
+            )}
           </div>
         </div>
       </Container>
