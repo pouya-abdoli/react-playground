@@ -53,6 +53,16 @@ const ShoppingCartProvider = ({ children }) => {
 
   const cartQty = cartItems.reduce((totalQty, item) => totalQty + item.qty, 0);
 
+  const [isLogin, setIsLogin] = useState(false);
+
+  const handleLogin = () => {
+    setIsLogin(true);
+  };
+
+  const handleLogout = () => {
+    setIsLogin(false);
+  };
+
   return (
     <ShoppingCartContext.Provider
       value={{
@@ -62,6 +72,9 @@ const ShoppingCartProvider = ({ children }) => {
         getProductQty,
         handleRemoveProduct,
         cartQty,
+        isLogin,
+        handleLogin,
+        handleLogout,
       }}
     >
       {children}
