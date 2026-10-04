@@ -57,14 +57,14 @@ const ShoppingCartProvider = ({ children }) => {
 
   const [isLogin, setIsLogin] = useState(false);
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
-  const handleLogin = () => {
-    login("salar", "1234").finally((data) => {
+  const handleLogin = (username, password) => {
+    login(username, password).finally((data) => {
       const token = "fake-token-12345";
       localStorage.setItem("token", token);
       setIsLogin(true);
-      navigate("/store")
+      navigate("/store");
     });
   };
 
@@ -75,6 +75,8 @@ const ShoppingCartProvider = ({ children }) => {
 
   const handleLogout = () => {
     setIsLogin(false);
+    navigate("/login");
+    localStorage.removeItem("token");
   };
 
   return (
