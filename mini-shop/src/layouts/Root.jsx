@@ -1,11 +1,14 @@
 import { Outlet } from "react-router";
 import Navbar from "../components/navbar/Navbar";
+import { ShoppingCartProvider } from "../context/ShoppingCartContext";
 
 const Root = () => {
   return (
     <div>
-      <Navbar />
-      <Outlet />
+      <ShoppingCartProvider>
+        <Navbar />
+        <Outlet />
+      </ShoppingCartProvider>
     </div>
   );
 };

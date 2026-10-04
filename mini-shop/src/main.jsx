@@ -4,7 +4,5 @@ import "./index.css";
 import { ShoppingCartProvider } from "./context/ShoppingCartContext.jsx";
 
 createRoot(document.getElementById("root")).render(
-  <ShoppingCartProvider>
     <App />
-  </ShoppingCartProvider>,
 );

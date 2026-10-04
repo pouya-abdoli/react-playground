@@ -1,5 +1,7 @@
-import { useContext, useState, createContext } from "react";
+import { useContext, useState, createContext, useEffect } from "react";
 import useLocalStorage from "../hooks/useLocalStorage";
+import { login } from "../services/api";
+import { useNavigate } from "react-router";
 
 const ShoppingCartContext = createContext({});
 
@@ -55,9 +57,21 @@ const ShoppingCartProvider = ({ children }) => {
 
   const [isLogin, setIsLogin] = useState(false);
 
+  const navigate = useNavigate()
+
   const handleLogin = () => {
-    setIsLogin(true);
+    login("salar", "1234").finally((data) => {
+      const token = "fake-token-12345";
+      localStorage.setItem("token", token);
+      setIsLogin(true);
+      navigate("/store")
+    });
   };
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) setIsLogin(true);
+  }, []);
 
   const handleLogout = () => {
     setIsLogin(false);
