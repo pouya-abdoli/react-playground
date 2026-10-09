@@ -23,7 +23,6 @@ const Hero = () => {
 
   return (
     <div className="bgImage min-h-[550px] sm:min-h-[600px] bg-gray-100 flex justify-center items-center duration-200">
-      {/* <img src={imageList[0].img} alt="" className="w-64" /> */}
       <div className="container pb-8 sm:pb-0">
         <div className="grid grid-cols-1 sm:grid-cols-2">
           {/* text section */}
@@ -49,7 +48,7 @@ const Hero = () => {
               <img
                 src={imgId}
                 alt=""
-                className="w-[300px] sm:w-[450px] sm:scale-125 mx-2 spin "
+                className="w-[300px] sm:w-[450px] sm:scale-125 mx-2 animate-spin-slow "
               />
             </div>
             <div className="flex lg:flex-col lg:top-1/2 lg:-translate-y-1/2 lg:py-2 justify-center gap-4 absolute bottom-[0px] lg: right-10 bg-white/35 rounded-full">
