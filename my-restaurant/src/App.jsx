@@ -1,3 +1,4 @@
+import AppStore from "./components/AppStore/AppStore";
 import Banner from "./components/Banner/Banner";
 import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
@@ -10,6 +11,7 @@ const App = () => {
       <Hero />
       <Services />
       <Banner />
+      <AppStore />
     </div>
   );
 };
