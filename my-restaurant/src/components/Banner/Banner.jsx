@@ -10,7 +10,7 @@ const Banner = () => {
       <div className="min-h-137.5 flex justify-center items-center backdrop-blur-xl py-12 sm:py-0">
         <div className="container">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div>
+            <div className="flex justify-center items-center">
               <img
                 src={img}
                 className="max-w-107.5 w-full mx-auto drop-shadow-[-10px_10px_12px_rgba(0,0,0,1)] "
