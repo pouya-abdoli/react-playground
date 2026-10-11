@@ -11,23 +11,36 @@ const AppStore = () => {
             <h1
               className="text-2xl text-center sm:text-4xl text-gray-500"
               dir="rtl"
+              data-aos="fade-down"
+              data-aos-duration="800"
+              data-aos-delay="100"
             >
               اپلیکیشن اژدر برای IOS , Android
             </h1>
             <div className="flex flex-wrap justify-center items-center sm:justify-items-start gap-7">
               <img
+                data-aos="zoom-in"
+                data-aos-delay="300"
                 src={AppStoreImg}
                 className="max-w-50 sm:max-w-45 md:max-w-55"
               />
               <img
+                data-aos="zoom-in"
+                data-aos-delay="400"
                 src={PlayStoreImg}
                 className="max-w-50 sm:max-w-45 md:max-w-55"
               />
             </div>
           </div>
-          <div className="">
-            <img src={Gif} className="max-w-[70%] sm:max-w-full block rounded-md mx-auto mix-blend-multiply" />
-
+          <div
+            data-aos="fade-left"
+            data-aos-duration="800"
+            data-aos-delay="500"
+          >
+            <img
+              src={Gif}
+              className="max-w-[70%] sm:max-w-full block rounded-md mx-auto mix-blend-multiply"
+            />
           </div>
         </div>
       </div>

@@ -31,7 +31,12 @@ const Services = () => {
         <div className="text-center mb-20 max-w-100 mx-auto">
           <h1 className="text-3xl font-bold">خدمات ما</h1>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 place-items-center">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="800"
+          data-aos-delay="200"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 place-items-center"
+        >
           {serviceData.map((item) => (
             <div
               key={item.id}
