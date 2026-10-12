@@ -30,10 +30,12 @@ const Services = () => {
     // Section wrapper with vertical padding
     <div className="py-10">
       <div className="container">
+
         {/* Section heading */}
         <div className="text-center mb-20 max-w-100 mx-auto">
           <h1 className="text-3xl font-bold">خدمات ما</h1>
         </div>
+
         {/* Responsive grid: 1 → 2 → 3 columns, fades up on scroll */}
         <div
           data-aos="fade-up"
@@ -42,11 +44,13 @@ const Services = () => {
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 place-items-center"
         >
           {serviceData.map((food) => (
+
             // Card: yellow background + white text on hover
             <div
               key={food.id}
               className="rounded-2xl bg-white hover:bg-yellow-500 hover:text-white relative shadow-xl duration-300 group w-full max-w-87.5"
             >
+
               {/* Food image — scales and rotates on card hover */}
               <div className="h-45 flex items-center justify-center">
                 <img
@@ -54,8 +58,10 @@ const Services = () => {
                   src={food.img}
                 />
               </div>
+
               {/* Card content: rating, name, description */}
               <div className="p-4 text-center">
+
                 {/* Star rating (4 out of 5) */}
                 <div className="w-full flex justify-center">
                   <DynamicStar
@@ -67,6 +73,7 @@ const Services = () => {
                     emptyStarColor="#e4e5e9"
                   />
                 </div>
+                
                 {/* Food name */}
                 <h1 className="text-xl font-bold">{food.name}</h1>
 
