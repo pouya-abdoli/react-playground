@@ -1,6 +1,7 @@
 import LOGO from "../../assets/images/food-logo.png";
 
 const Footer = () => {
+  // Footer link columns
   const linkSections = [
     {
       title: "دسترسی سریع",
@@ -25,18 +26,27 @@ const Footer = () => {
   ];
 
   return (
+    // Outer wrapper with responsive horizontal padding
     <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32">
+      
+      {/* RTL layout: logo/description on right, links on left */}
       <div
         dir="rtl"
         className="flex flex-col md:flex-row items-start justify-between gap-8 md:gap-10 py-8 md:py-10 border-b border-gray-500/30 text-gray-500"
       >
+        
+        {/* Brand section: logo + description */}
         <div className="w-full md:max-w-102.5">
+
+          {/* Logo + restaurant name */}
           <div className="flex items-center  justify-center md:justify-start gap-2 md:gap-3">
             <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl text-gray-900">
               اژدر
             </h1>
             <img className="w-3 sm:w-10 md:w-12" src={LOGO} alt="logo" />
           </div>
+
+          {/* Restaurant description */}
           <p className="mt-4 md:mt-6 text-sm md:text-base leading-7">
             در رستوران اژدر، با استفاده از مواد اولیه تازه و دستورهای اصیل
             ایرانی، تجربه‌ای بی‌نظیر از طعم و کیفیت را برای شما فراهم می‌کنیم.
@@ -47,6 +57,7 @@ const Footer = () => {
           </p>
         </div>
 
+        {/* Link columns: 2-column grid on all screens */}
         <div className="grid grid-cols-2 gap-6 sm:gap-10 w-full md:w-[45%] md:py-20">
           {linkSections.map((section, index) => (
             <div key={index}>
@@ -67,6 +78,7 @@ const Footer = () => {
         </div>
       </div>
 
+      {/* Copyright line */}
       <p
         className="py-4 text-center text-xs sm:text-sm md:text-base text-gray-500/80"
         dir="rtl"

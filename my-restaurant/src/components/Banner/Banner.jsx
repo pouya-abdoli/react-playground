@@ -6,10 +6,17 @@ import { GiFoodTruck } from "react-icons/gi";
 
 const Banner = () => {
   return (
+    // Section wrapper with fixed min height
     <div className="min-h-137.5">
+
+      {/* Centered inner wrapper with backdrop blur */}
       <div className="min-h-137.5 flex justify-center items-center backdrop-blur-xl py-12 sm:py-0">
         <div className="container">
+
+          {/* Two-column grid: image on one side, content on the other */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            
+            {/* Left column: food image — fades up on scroll */}
             <div
               data-aos="fade-up"
               data-aos-duration="800"
@@ -20,7 +27,11 @@ const Banner = () => {
                 className="max-w-107.5 w-full mx-auto drop-shadow-[-10px_10px_12px_rgba(0,0,0,1)] "
               />
             </div>
+
+            {/* Right column: heading, description, icons, button */}
             <div className="flex flex-col justify-center gap-6 sm:pt-0">
+
+              {/* Heading — fades down */}
               <h1
                 data-aos="fade-down"
                 data-aos-duration="800"
@@ -29,6 +40,8 @@ const Banner = () => {
               >
                 چرا رستوران اژدر
               </h1>
+
+              {/* Description — fades up */}
               <p
                 data-aos="fade-up"
                 data-aos-duration="800"
@@ -44,6 +57,8 @@ const Banner = () => {
                 اصالت را روایت می‌کند. ما به کیفیت، بهداشت و رضایت شما اهمیت
                 می‌دهیم و همیشه میزبان گرمی برای شما هستیم.
               </p>
+
+              {/* Feature icons — staggered zoom-in, scale on hover */}
               <div className="flex justify-center gap-6">
                 <div data-aos="zoom-in" data-aos-delay="300">
                   <GrSecure className="text-4xl h-20 w-20 shadow-sm p-5 rounded-full bg-violet-500 transition-transform duration-200 hover:scale-110" />
@@ -55,6 +70,8 @@ const Banner = () => {
                   <GiFoodTruck className="text-4xl h-20 w-20 shadow-sm p-5 rounded-full bg-green-500 transition-transform duration-200 hover:scale-110" />
                 </div>
               </div>
+
+              {/* Order button — fades up last */}
               <div
                 data-aos="fade-up"
                 data-aos-duration="600"

@@ -1,17 +1,26 @@
 import { FaCartShopping } from "react-icons/fa6";
 import { Link } from "react-router";
-import LOGO from "../../assets/images/food-logo.png"
+import LOGO from "../../assets/images/food-logo.png";
 
 const Navbar = () => {
   return (
+    // Sticky-looking navbar with shadow and white background
     <div className="shadow-md bg-white duration-200">
       <div className="container py-3 sm:py-0">
+
+        {/* Main flex row: actions on one side, logo on the other */}
         <div className="flex justify-between items-center">
+
+          {/* Left side: order button + navigation links */}
           <div className="flex items-center gap-4">
+            
+            {/* Order button with cart icon */}
             <button className="bg-linear-to-r from-yellow-400 to-yellow-500 text-white py-1 px-4 rounded-full flex items-center gap-3">
               سفارش
               <FaCartShopping />
             </button>
+
+            {/* Desktop-only navigation links (hidden on mobile) */}
             <ul className="hidden sm:flex items-center gap-4">
               <li>
                 <Link
@@ -39,6 +48,8 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
+
+          {/* Right side: brand logo + name */}
           <div>
             <a href="#" className="font-bold text-2xl sm:text-3xl flex gap-2">
               اژدر
