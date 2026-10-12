@@ -4,6 +4,7 @@ import avatar1 from "../../assets/testimonials/avatar1.jpg";
 import avatar2 from "../../assets/testimonials/avatar2.jpg";
 import avatar3 from "../../assets/testimonials/avatar3.jpg";
 
+// Fix CJS/ESM interop — react-slick exports as CommonJS, which breaks ES module imports
 const SliderComponent = Slider.default || Slider;
 
 const testimonialData = [
@@ -27,6 +28,7 @@ const testimonialData = [
   },
 ];
 
+// Custom arrow component
 const Arrow = ({ direction, onClick }) => (
   <button
     onClick={onClick}
@@ -42,6 +44,7 @@ const Arrow = ({ direction, onClick }) => (
 );
 
 const Testimonial = () => {
+  // Slick slider configuration
   const settings = {
     dots: true,
     infinite: true,
@@ -62,21 +65,26 @@ const Testimonial = () => {
       <SliderComponent {...settings}>
         {testimonialData.map((item) => (
           <div key={item.id} className="px-2">
+            {/* Card */}
             <div className="rounded-2xl bg-[#1e2a3a] p-8 text-center text-white shadow-xl">
+              {/* Avatar */}
               <img
                 src={item.img}
                 alt={item.name}
                 className="mx-auto mb-5 h-20 w-20 rounded-full border-4 border-white/10 object-cover"
               />
 
+              {/* Decorative quote mark */}
               <span className="absolute right-8 top-6 font-serif text-7xl leading-none text-white/15">
                 ”
               </span>
 
+              {/* Testimonial text */}
               <p className="mb-5 text-sm leading-8 text-slate-200" dir="rtl">
                 {item.text}
               </p>
 
+              {/* Reviewer name */}
               <h4 className="text-lg font-semibold">{item.name}</h4>
             </div>
           </div>
