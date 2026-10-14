@@ -1,3 +1,4 @@
+import Blog from "./components/Blog";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import NewsStories from "./components/NewsStories";
@@ -12,6 +13,7 @@ const App = () => {
       </div>
       <NewsStories />
       <TrendingNews />
+      <Blog />
     </div>
   );
 };
