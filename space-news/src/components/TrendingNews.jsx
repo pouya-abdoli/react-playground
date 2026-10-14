@@ -10,7 +10,7 @@ const TrendingNews = () => {
       <div className="flex flex-col lg:flex-row justify-center gap-6 lg:gap-10">
 
         {/* Left: trending image */}
-        <div className="w-full lg:w-202 h-auto ">
+        <div className="w-full lg:w-202 h-auto lg:mt-22">
           <img
             src={img1}
             className="w-full h-full object-cover rounded-md max-h-100 sm:max-h-125 lg:max-163"
