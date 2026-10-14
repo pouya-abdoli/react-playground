@@ -1,6 +1,7 @@
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import NewsStories from "./components/NewsStories";
+import TrendingNews from "./components/TrendingNews";
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
         <Hero />
       </div>
       <NewsStories />
+      <TrendingNews />
     </div>
   );
 };
