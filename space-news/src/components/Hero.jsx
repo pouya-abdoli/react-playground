@@ -115,18 +115,18 @@ const Hero = () => {
 
               {/* Thumbnail */}
               <img
-                className="w-32.5 h-33.5 rounded-sm object-cover"
+                className="w-32.5 h-33.5 rounded-sm object-cover shrink-0"
                 src={news.img}
                 alt={news.title}
               />
 
               {/* Text block: meta on top, title in middle, meta on bottom */}
-              <div className="flex flex-col justify-between">
-                <span>
+              <div className="flex flex-col justify-center gap-2">
+                <span className="text-white/60 text-[12px]">
                   {news.author} | {news.date}
                 </span>
-                <p>{news.title}</p>
-                <span>
+                <p className="font-medium">{news.title}</p>
+                <span className="text-white/60 text-[12px]">
                   {news.category} | {news.readTime}
                 </span>
               </div>
@@ -134,7 +134,7 @@ const Hero = () => {
           ))}
         </div>
       </div>
-      
+
       {/* Hero footer — text-only news row with a top border separator */}
       <div className="flex flex-col lg:flex-row gap-5 m-4 lg:m-10 border-t border-gray-400">
         {footerNewsData.map((news, index) => (
@@ -142,7 +142,7 @@ const Hero = () => {
             className="flex flex-col mt-3 gap-1 max-w-full lg:max-w-100"
             key={index}
           >
-            <span>
+            <span className="text-white/60">
               {news.author} | {news.date}
             </span>
             <p>{news.title}</p>
