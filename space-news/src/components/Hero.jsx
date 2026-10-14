@@ -101,7 +101,7 @@ const Hero = () => {
         </div>
 
         {/* Middle: main hero image (shown first on mobile via order-first) */}
-        <div className="mx-10 order-first lg:order-0 ">
+        <div className="mx-auto lg:mx-10 order-first lg:order-0 ">
           <img
             className="w-89.75 h-auto lg:h-147.25 object-cover"
             src={hero1}
