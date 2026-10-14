@@ -139,14 +139,14 @@ const Hero = () => {
       <div className="flex flex-col lg:flex-row gap-5 m-4 lg:m-10 border-t border-gray-400">
         {footerNewsData.map((news, index) => (
           <div
-            className="flex flex-col mt-3 gap-1 max-w-full lg:max-w-100"
+            className="flex flex-col mt-3 gap-1 max-w-full lg:max-w-100 mb-8"
             key={index}
           >
             <span className="text-white/60">
               {news.author} | {news.date}
             </span>
             <p>{news.title}</p>
-            <span>
+            <span className="text-white/60">
               {news.category} | {news.readTime}
             </span>
           </div>
