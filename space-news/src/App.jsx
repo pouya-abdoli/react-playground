@@ -1,4 +1,5 @@
 import Blog from "./components/Blog";
+import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import NewsStories from "./components/NewsStories";
@@ -14,6 +15,9 @@ const App = () => {
       <NewsStories />
       <TrendingNews />
       <Blog />
+      <div className="bg-[#0e0e0e]  text-white">
+        <Footer />        
+      </div>
     </div>
   );
 };
