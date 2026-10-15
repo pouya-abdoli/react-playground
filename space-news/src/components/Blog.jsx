@@ -54,7 +54,7 @@ const blogs = [
 
 const Blog = () => {
   return (
-    <div className="mx-10 my-20">
+    <div className="mx-10 my-10">
       {/* Responsive grid: 1 col mobile → 2 md → 3 lg */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {blogs.map((item, index) => (
