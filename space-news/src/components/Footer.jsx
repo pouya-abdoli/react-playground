@@ -79,6 +79,7 @@ const Footer = () => {
   return (
     <div className="mx-10 py-10">
       {/* Top row: logo + socials | newsletter */}
+      {/* prettier-ignore  */}
       <div className="flex flex-col md:flex-row justify-between md:items-start gap-6">
         {/* Left: logo + social icons */}
         <div>
@@ -110,6 +111,52 @@ const Footer = () => {
             </button>
           </div>
         </div>
+      </div>
+
+      {/* Divider between top section and link columns */}
+      <hr className="my-10 border-white/20" />
+
+      {/* Link columns: 2 cols mobile → 3 md → 6 lg */}
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        {footerLinks.map((col, index) => (
+          <div key={index}>
+            {/* Column heading */}
+            <h4 className="text-sm font-medium mb-3">{col.heading}</h4>
+
+            {/* Column links */}
+            <ul className="space-y-2">
+              {col.items.map((item, idx) => (
+                <li key={idx}>
+                  <a
+                    href="#"
+                    className="text-xs text-white/70 hover:text-white"
+                  >
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+
+      {/* Divider before copyright */}
+      <hr className="my-10 border-white/20" />
+
+      {/* Bottom: copyright + legal text */}
+      <div>
+        <p className="text-sm text-white/40 text-center">
+          <span>
+            © 2026 Indie Space, LLC. All Rights Reserved. Use of this site
+            constitutes acceptance of our Terms of Service, Privacy Policy and
+            Do Not Sell or Share My Personal Information. Indie Space may
+            receive compensation for some links
+          </span>
+          <span>
+            to products and services on this website. Offers may be subject to
+            change without notice
+          </span>
+        </p>
       </div>
     </div>
   );
