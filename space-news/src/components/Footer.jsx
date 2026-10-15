@@ -86,7 +86,7 @@ const Footer = () => {
           <div className="flex gap-3 mt-3 justify-center">
             <a href="#" className="social-icon"><FaFacebookF /></a>
             <a href="#" className="social-icon"><FaTwitter /></a>
-            <a href="#" className="social-icon"><FaInstagr am /></a>
+            <a href="#" className="social-icon"><FaInstagram /></a>
             <a href="#" className="social-icon"><FaPinterestP /></a>
             <a href="#" className="social-icon"><FaPaperPlane /></a>
           </div>
