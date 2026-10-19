@@ -61,9 +61,12 @@ const newsData = [
 const Hero = () => {
   return (
     <div
-      className="flex flex-col lg:flex-row items-center justify-start min-h-screen bg-no-repeat"
-      style={{ backgroundImage: `url(${basket})` }}
+      className="flex flex-col lg:flex-row items-center justify-start min-h-screen bg-no-repeat "
     >
+      <div>
+        <img src={basket}     
+        className=" absolute w-150 h-150 ml-20 -mt-60" />
+      </div>
       {/* LEFT SECTION: Hero Typography */}
       <div className="flex flex-col items-start justify-center ml-55 -mt-40">
         <img src={heroText} className="z-10 mt-20 lg:w-125 lg:-mt-30" />
@@ -73,15 +76,15 @@ const Hero = () => {
       <div className="flex flex-col items-center justify-center text-center lg:-ml-66 z-10">        
         <img
           src={basketplayer}
-          className="w-full max-w-155 object-contain mb-2  "
+          className="w-full max-w-155 object-contain mb-2"
         />
-        <p className="text-[#262626] max-w-md mb-6 px-4">
+        <p className="text-[#262626] max-w-sm mb-6 px-4 -mt-15">
           The EuroLeague Finals Top Scorer is the individual award for the
           player that gained the highest points in the EuroLeague Finals
         </p>
         <button
-          className="w-71 h-15 text-white bg-[#262626] rounded transition 
-                    hover:bg-gray-800"
+          className="w-71 h-15 text-white bg-[#262626] rounded-xl transition 
+                    hover:bg-gray-800 font-bold text-lg"
         >
           Continue Reading
         </button>
