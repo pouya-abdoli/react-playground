@@ -2,6 +2,7 @@ import { useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import { IoMenu } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
+import { Link } from "react-router";
 
 const Header = () => {
   // Controls mobile sidebar open/close state
@@ -14,7 +15,7 @@ const Header = () => {
       {/* Main header bar: container centers content; px-* adds horizontal padding 
       (container alone doesn't add padding) */}
       <div className="flex justify-between items-center h-full px-10 lg:px-30 md:px-15 mx-auto container">
-        <h2 className="text-4xl font-bold font-logo">Sport News</h2>
+        <Link to={"/"} className="text-4xl font-bold font-logo">Sport News</Link>
 
         {/* Desktop navigation - hidden below lg breakpoint */}
         <ul className="hidden lg:flex gap-15">
