@@ -12,3 +12,9 @@
 @theme {
   --font-logo: "Darkline", cursive;
 }
+
+@utility smooth-blur {
+  backdrop-filter: blur(100px);
+  mask-image: linear-gradient(to top, black 0%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to top, black 0%, transparent 100%);
+}

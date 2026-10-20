@@ -99,15 +99,14 @@ const Hero = () => {
 
             {/* Card Container: Uses inline style for the dynamic background image */}
             <div
-              className="w-67 h-58 bg-cover bg-center rounded-lg p-4
+              className="w-67 h-58 bg-cover bg-center rounded-lg p-4  transition duration-300 hover:scale-105
                              text-white flex flex-col justify-end relative overflow-hidden"
               style={{ backgroundImage: `url(${card.image})` }}
             >
 
               {/* Gradient Overlay: Ensures text remains readable over the image */}
               <div
-                className="absolute bottom-0 left-0 right-0 h-20 bg-linear-to-t
-                             from-black/40 backdrop-blur-sm"
+                className="absolute bottom-0 left-0 right-0 h-20 smooth-blur"
               ></div>
               
               {/* Text Content: Positioned relatively to sit above the gradient overlay */}
