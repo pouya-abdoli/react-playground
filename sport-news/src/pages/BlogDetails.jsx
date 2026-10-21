@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router";
 import newsData from "../data";
+import { IoArrowBack } from "react-icons/io5";
 
 const BlogDetails = () => {
   const { id } = useParams();
@@ -15,10 +16,16 @@ const BlogDetails = () => {
   );
 
   return (
-    <div
-      className="flex justify-center mx-4 sm:mx-8 md:mx-16 lg:mx-24 my-8 sm:my-12 md:my-16 lg:my-20"
-    >
+    <div className="flex justify-center mx-4 sm:mx-8 md:mx-16 lg:mx-24 my-4 sm:my-6 md:my-8 lg:my-10">
       <div className="w-full max-w-225 ">
+        <Link to="/" className="inline-flex items-center gap-2 text-sm font-semibold mb-4">
+          <div>
+            <IoArrowBack className="w-4 h-4 duration-300 hover:-translate-x-1"/>
+          </div>
+          <div className="hover:text-black/80">
+            Back to Home
+          </div>
+        </Link>
 
         {/* Title & Meta */}
         <div className="mb-6">
@@ -70,14 +77,12 @@ const BlogDetails = () => {
             {/* CSS Grid: 1 column on mobile, 2 on tablet, 3 on desktop */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
               {relatedNews.map((related) => (
-
                 // Card Wrapper with hover effects (shadow + slight scale)
                 <div
                   key={related.id}
                   className="w-full h-auto rounded-md shadow-md cursor-pointer hover:shadow-2xl
                              transition duration-300 hover:scale-101 border border-gray-100"
                 >
-                  
                   {/* Wrap entire card in Link to make the whole thing clickable */}
                   <Link to={`/blog/${related.id}`}>
                     <img
