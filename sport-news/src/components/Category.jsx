@@ -23,7 +23,7 @@ const Category = () => {
   ];
   return (
     // Main section wrapper with standard responsive spacing
-    <section className="container mx-auto px-4 py-16 mt-10">
+    <section className="container mx-auto px-46">
       <h4 className="text-2xl font-bold mb-6">Category</h4>
 
       {/* 
