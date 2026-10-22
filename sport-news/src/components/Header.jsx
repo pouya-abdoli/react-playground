@@ -24,7 +24,7 @@ const Header = () => {
     // Header wrapper with elevated z-index to stay above page content
     <header className="h-15 w-full bg-white shadow-2xl relative z-50">
       <div className="container flex justify-between items-center h-full">
-        <Link to="/" className="text-4xl font-bold font-logo">
+        <Link to="/" className="text-xl lg:text-4xl font-bold font-logo">
           Sport News
         </Link>
 
