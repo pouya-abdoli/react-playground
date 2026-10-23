@@ -1,3 +1,4 @@
+import BannerSlider from "../components/BannerSlider";
 import Category from "../components/Category";
 import Hero from "../components/Hero";
 import TrendingNews from "../components/TrendingNews";
@@ -8,6 +9,7 @@ const Home = () => {
       <Hero />
       <Category />
       <TrendingNews />
+      <BannerSlider />
     </div>
   );
 };
