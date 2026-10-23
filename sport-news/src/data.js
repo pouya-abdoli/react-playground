@@ -6,6 +6,10 @@ import trendingImg2 from "./assets/trending-2.png";
 import trendingImg3 from "./assets/trending-3.png";
 import trendingImg4 from "./assets/trending-4.png";
 
+import slider1 from "../src/assets/slider-1.png";
+import slider2 from "../src/assets/slider-2.jpg";
+import slider3 from "../src/assets/slider-3.jpg";
+
 import article1 from "./assets/article-1.png";
 import article2 from "./assets/article-2.png";
 import article3 from "./assets/article-3.png";
@@ -473,6 +477,99 @@ const newsData = [
       { title: "Community Pride", desc: "Parents and local fans gathered for a signing ceremony, celebrating the players' achievements." },
       { title: "Conclusion", desc: "The signings are a proud moment for the program — and a promising sign of what's to come for the next generation." },
     ],
+  },
+      {
+    id: 21,
+    image: slider1,
+    date: "Agence France-Presse - 04 June 2023",
+    title: "Lionel Messi Leaving Ligue 1 Team Paris Saint-Germain, Club Confirms",
+    description: "",
+    category: "Football",
+    introduction: "The football world has been rocked by the official confirmation that Lionel Messi will depart Paris Saint-Germain at the end of his contract. After two turbulent years in the French capital, the Argentine magician leaves behind a mixed legacy. While he thrilled fans with moments of individual brilliance and helped secure domestic silverware, the ultimate prize—the UEFA Champions League—remained agonizingly out of reach. As the curtains close on his Parisian chapter, speculation regarding the next destination for the World Cup winner is reaching a fever pitch.",
+    sections: [
+      {
+        title: "A Mixed Legacy in Paris",
+        desc: "Messi's arrival in Paris was heralded as the final piece of the puzzle for PSG's Champions League ambitions. Alongside Neymar and Kylian Mbappe, he formed the most feared attacking trident in world football. However, football is not played on paper. Despite lifting the Ligue 1 trophy twice, the team's catastrophic collapses in the Champions League knockout stages against Real Madrid and Bayern Munich left a bitter taste. Messi's tenure will be remembered for his breathtaking assists and spectacular goals, but also for the collective failure to conquer Europe."
+      },
+      {
+        title: "The Next Destination",
+        desc: "Where does the greatest player of all time go next? The rumor mill is churning with unprecedented intensity. A romantic return to FC Barcelona is highly desired by the fans, but the club's severe financial constraints make a reunion incredibly complex. Alternatively, a record-shattering move to the Saudi Pro League could see him become the highest-paid athlete in history, following in the footsteps of Cristiano Ronaldo. A switch to the MLS with Inter Miami is also a strong contender, offering a unique lifestyle and a massive commercial market ahead of the 2026 World Cup."
+      },
+      {
+        title: "PSG's Rebuilding Phase",
+        desc: "With Messi gone, and the future of Neymar also in doubt, PSG is entering a critical transitional phase. The club's Qatari ownership is reportedly shifting its strategy away from signing aging superstars and is instead looking to build a younger, more cohesive squad centered around French superstar Kylian Mbappe. The incoming manager will face the daunting task of replacing Messi's unparalleled creativity and vision in the midfield, while also fostering a stronger team mentality that has been lacking in crucial moments."
+      },
+      {
+        title: "Financial Ramifications",
+        desc: "Offloading Messi's astronomical wages is a massive financial relief for PSG, giving them significantly more flexibility under UEFA's Financial Fair Play (FFP) regulations. This newfound wage space will allow the club to aggressively pursue top-tier defensive and midfield reinforcements. The club is reportedly targeting younger talents who can grow with the project rather than relying on quick fixes. This financial reset could be the catalyst that finally brings balance to a squad that has been top-heavy for years."
+      },
+      {
+        title: "Global Fan Reactions",
+        desc: "The reaction to Messi's departure has been a global phenomenon. In Paris, the sentiment is mixed; some fans feel a sense of relief that the 'superstar experiment' is over, while others mourn the loss of a player who brought immense global attention to the club. Meanwhile, fans in Barcelona are organizing campaigns to bring their hero home, and fans in Miami and Riyadh are already dreaming of seeing the Argentine maestro in their colors. One thing is certain: wherever Messi goes next, the football world will be watching."
+      }
+    ]
+  },
+  {
+    id: 22,
+    image: slider2,
+    date: "John Smith, October 10, 2023",
+    title: "Historic Basketball Match Ends in Nail-Biting Finish",
+    description: "",
+    category: "Basketball",
+    introduction: "The city witnessed a basketball spectacle for the ages as the local team orchestrated a miraculous comeback to clinch victory in the final seconds. In a game that had everything—bone-crunching defense, blistering offensive runs, and a buzzer-beater that defied belief—the fans inside the arena were treated to an unforgettable rollercoaster of emotions. This wasn't just a regular-season win; it was a statement of intent that echoed across the entire league.",
+    sections: [
+      {
+        title: "The Tale of Two Halves",
+        desc: "The first half was a masterclass from the visiting team. They dismantled the home defense with surgical precision, raining down three-pointers and building a seemingly insurmountable 15-point lead. The home crowd was silenced, and the players looked visibly frustrated. However, the momentum shifted dramatically in the third quarter. A series of aggressive drives to the rim and a renewed focus on offensive rebounding sparked a 12-0 run that brought the arena back to life."
+      },
+      {
+        title: "A Buzzer-Beater for the Ages",
+        desc: "With the clock ticking down to a mere 4.2 seconds and the score tied, the home team's All-Star point guard took matters into his own hands. Receiving the inbound pass, he exploded past two defenders, sprinted the length of the court, and launched a highly contested, fading floater as time expired. The arena erupted in pure chaos as the ball kissed off the glass and dropped through the net. It was a moment of pure individual brilliance that instantly entered the franchise's history books."
+      },
+      {
+        title: "Defensive Grit and Determination",
+        desc: "While the offensive heroics will dominate the highlight reels, the game was won on the defensive end. The home team forced five crucial turnovers in the fourth quarter, converting them into 11 points. Their decision to switch to a tight, aggressive zone defense completely disrupted the visitors' offensive rhythm, forcing them into desperation passes and low-percentage shots. The defensive intensity was spearheaded by the veteran forward, who anchored the paint and altered several key shots down the stretch."
+      },
+      {
+        title: "The MVP Triple-Double",
+        desc: "The hero of the night finished with a historic stat line: 32 points, 11 assists, and 10 rebounds. It was a masterclass in leadership and endurance. He played all 48 minutes and scored 15 of his points in the final quarter alone. In the post-game press conference, a visibly exhausted but ecstatic MVP deflected the praise: 'This isn't about me. This is about the 15 guys in that locker room who never stopped believing. We fought until the final whistle, and that's the culture we are building here.'"
+      },
+      {
+        title: "Playoff Implications",
+        desc: "This gritty victory propels the home team into sole possession of first place in the conference, a massive psychological boost as they enter the final stretch of the regular season. The head coach emphasized the significance of the win, noting that 'championship teams find a way to win even when they don't play their best.' This game proved to the squad that they can overcome intense adversity against top-tier opponents, setting the stage for what promises to be a thrilling playoff run."
+      }
+    ]
+  },
+  {
+    id: 23,
+    image: slider3,
+    date: "Emily Davis, October 10, 2023",
+    title: "Epic Tennis Final Sets New Records",
+    description: "",
+    category: "Tennis",
+    introduction: "A thrilling five-set tennis final captivated audiences worldwide as the world No. 1 claimed victory in a match that will be remembered for generations. The grueling contest lasted over four and a half hours, pushing both players to the absolute limits of their physical and mental endurance. It was a battle of attrition that transcended the sport itself, leaving fans who had stayed well past midnight utterly exhausted just from watching the spectacle unfold under the stadium lights.",
+    sections: [
+      {
+        title: "An Unrelenting Battle",
+        desc: "The match ebbed and flowed with the unpredictability of a tempest. The first two sets were decided by grueling tie-breaks, showcasing the incredible precision and mental fortitude of both competitors. The rallies were punishing, often exceeding 30 shots as both athletes traded powerful groundstrokes from the baseline. The heat on the center court was oppressive, but neither player was willing to yield an inch, turning the match into an instant classic."
+      },
+      {
+        title: "The Crucial Turning Point",
+        desc: "Down two sets to one and looking visibly fatigued, the world No. 1 looked on the verge of defeat. However, finding a hidden reservoir of energy, they took a tactical medical timeout. When they returned, the body language had changed entirely. They increased their first-serve percentage and began attacking the net with reckless abandon, completely flipping the momentum and forcing a deciding fifth set. It was a tactical masterstroke from the defending champion."
+      },
+      {
+        title: "Breaking Records",
+        desc: "The final set was a pure display of championship pedigree. Both players held serve stubbornly until the very last game, where the No. 1 finally broke through with a stunning cross-court winner. The victory not only secured the Grand Slam title but also broke the record for the longest final in the tournament's illustrious history. As the final ball landed just inside the baseline, the champion collapsed to the clay, overcome with emotion and physical exhaustion."
+      },
+      {
+        title: "A Stadium Erupts",
+        desc: "The atmosphere on center court was electric and unforgettable. Fans who had braved the late-night chill were treated to a spectacle of the highest quality, cheering on both players equally. The mutual respect between the two athletes was palpable. When the runner-up stepped up to the microphone, the crowd gave a thunderous standing ovation, acknowledging the incredible battle they had just witnessed. The sheer emotion in the stadium was a testament to the power of the sport."
+      },
+      {
+        title: "Reflections on a Classic",
+        desc: "In the post-match press conference, the runner-up was gracious in defeat, stating, 'I left my heart out there on the court. He was just the better player today.' The champion, visibly exhausted and fighting back tears, dedicated the win to his coaching team and his family. Both players acknowledged that this match would define their rivalry and serve as a benchmark for the rest of their careers, cementing their places in tennis folklore."
+      }
+    ]
   },
 ];
 
