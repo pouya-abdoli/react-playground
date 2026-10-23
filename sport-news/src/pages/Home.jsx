@@ -3,6 +3,7 @@ import Category from "../components/Category";
 import Hero from "../components/Hero";
 import TrendingNews from "../components/TrendingNews";
 import SportsArticle from "../components/SportsArticle";
+import NewsLetter from "../components/NewsLetter";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <TrendingNews />
       <BannerSlider />
       <SportsArticle />
+      <NewsLetter />
     </div>
   );
 };
