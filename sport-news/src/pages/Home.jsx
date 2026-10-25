@@ -4,6 +4,7 @@ import Hero from "../components/Hero";
 import TrendingNews from "../components/TrendingNews";
 import SportsArticle from "../components/SportsArticle";
 import NewsLetter from "../components/NewsLetter";
+import ClubsRanking from "../components/ClubsRanking";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <BannerSlider />
       <SportsArticle />
       <NewsLetter />
+      <ClubsRanking />
     </div>
   );
 };
