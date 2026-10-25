@@ -14,8 +14,8 @@ const Home = () => {
       <TrendingNews />
       <BannerSlider />
       <SportsArticle />
-      <NewsLetter />
       <ClubsRanking />
+      <NewsLetter />
     </div>
   );
 };
