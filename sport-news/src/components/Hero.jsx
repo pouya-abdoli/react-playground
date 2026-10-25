@@ -21,7 +21,7 @@ const newsData = [
 
 const Hero = () => {
   return (
-    <section className="w-full lg:min-h-[85vh] flex flex-col lg:items-center overflow-hidden bg-white">
+    <section className="w-full flex flex-col lg:items-center overflow-hidden bg-white py-10 lg:py-16">
       <div className="container mx-auto px-4 lg:px-8 py-10 lg:py-0">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-center">
