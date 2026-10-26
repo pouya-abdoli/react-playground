@@ -3,7 +3,7 @@
 /* Load the local font file */
 @font-face {
   font-family: "Darkline";
-  src: url("./fonts/darkline.ttf") format("truetype");
+  src: url("/fonts/darkline.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
