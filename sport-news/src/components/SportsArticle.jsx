@@ -10,7 +10,7 @@ const SportsArticle = () => {
   return (
     <section>
       {/* Responsive CSS Grid: 1 col on mobile, 2 on tablet, 3 on desktop */}
-      <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 lg:py-6">
+      <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 py-6 lg:py-6">
 
         {/* Loop through the filtered data */}
         {articlesData.map((article) => (
