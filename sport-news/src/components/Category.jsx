@@ -25,11 +25,11 @@ const Category = () => {
   ];
 
   return (
-    <section className="container py-16">
+    <section className="container">
       <h4 className="text-2xl font-bold mb-6">Category</h4>
 
       {/* Responsive CSS Grid: 1 col on mobile, 2 on tablet, 4 on desktop */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 place-items-center">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 place-items-center">
         
         {/* Loop through data to render each column */}
         {categories.map((item) => (
