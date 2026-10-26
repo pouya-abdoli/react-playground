@@ -56,7 +56,7 @@ const BannerSlider = () => {
   };
 
   return (
-    <div className="container py-2 lg:py-0 mb-16 relative">
+    <div className="container py-8 lg:py-0 relative">
       <Slider {...settings}>
         {sliderData.map((news) => (
           <div key={news.id}>
