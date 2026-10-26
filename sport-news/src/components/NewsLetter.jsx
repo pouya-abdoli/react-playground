@@ -18,7 +18,7 @@ const NewsLetter = () => {
   return (
     <section>
       {/* Main container */}
-      <div className="pb-16 container">
+      <div className="lg:py-22 container">
         
         {/* Responsive Grid: 1 column on mobile, 2 on desktop. Gray card background. */}
         <div className="bg-slate-200 rounded-2xl grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-4 items-center">
