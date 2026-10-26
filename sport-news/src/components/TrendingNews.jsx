@@ -7,7 +7,7 @@ const TrendingNews = () => {
   const rightItem = newsData.find((news) => news.id === 6);
 
   return (
-    <section className="container py-16">
+    <section className="container lg:py-16 py-5">
       {/* Parent Container: lg:h-152 (608px) locks the height on desktop for a perfect side-by-side match */}
       <div className="w-full bg-slate-100 rounded-xl flex flex-col lg:flex-row gap-6 lg:gap-8 overflow-hidden lg:h-152">
         
