@@ -16,7 +16,7 @@ const TrendingNews = () => {
           <h2 className="text-2xl font-bold mb-2">Trending News</h2>
 
           {/* justify-between distributes the 3 items evenly within the fixed height */}
-          <div className="flex flex-col justify-between flex-1 gap-y-4">
+          <div className="flex flex-col justify-between flex-1 gap-y-12 lg:gap-y-4">
             {leftItems.map((news) => (
               <Link key={news.id} to={`/blog/${news.id}`} className="group">
                 
